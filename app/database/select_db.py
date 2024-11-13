@@ -10,7 +10,7 @@ class SelectDb:
     """ Делает выборку из БД. """
 
     @staticmethod
-    async def select_toasts(theme_id: int):
+    async def select_random_toast(theme_id: int):
         """ Выбирает случайный тост по теме. """
         async with async_session() as session:
             query = select(Toast).filter_by(theme_id=theme_id)
