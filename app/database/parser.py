@@ -63,11 +63,6 @@ class Parser:
             self.__driver.close()
             self.__driver.quit()
 
-    def get_content(self):
+    def get_content(self) -> dict:
         """ Возвращает загруженный контент. """
         return self.content
-
-
-parser = Parser()
-parser.load_content()
-print(parser.get_content())
