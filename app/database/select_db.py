@@ -3,7 +3,7 @@ import random
 
 from sqlalchemy import select
 
-from models import async_session, Toast
+from app.database.models import async_session, Toast
 
 
 class SelectDb:
