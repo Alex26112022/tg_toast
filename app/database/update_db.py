@@ -5,17 +5,16 @@ from app.database.json_worker import JsonWorker
 from app.database.models import async_run_db, async_session, Theme, Toast
 from app.database.parser import Parser
 from config import path_json
-from models import async_session
 
 
 def get_json_db():
     """ Возвращает json данные для БД. """
-    # parser = Parser()
-    # parser.load_content()
-    # json_data = parser.get_content()
+    parser = Parser()
+    parser.load_content()
+    json_data = parser.get_content()
 
     worker = JsonWorker(path_json)
-    # worker.load_json(json_data)
+    worker.load_json(json_data)
     json_db = worker.read_json()
     return json_db
 

@@ -2,10 +2,10 @@
 extend-ignore = E203
 exclude =
     .git,
-    ./venv/,
+    .venv,
     *migrations*,
     __pycache__,
-    docs/source/conf.py,
+    docs\source\conf.py,
     old,
     build,
     dist
